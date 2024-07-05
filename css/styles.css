@@ -1,0 +1,194 @@
+/* Author: Dua Hasan
+   Date: 7/4/2024
+   File name: Styles.css */
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  nav ul{
+    list-style-type: none;
+  }
+  nav li {
+    display: block;
+    border-top: 0.5px solid #f59e34;
+  }
+  
+  
+  /* Style rules for body and images*/
+
+  body {
+    background-color: #898c8e41;
+  }
+  img {
+     max-width: 100%;
+     display: block;
+  }
+
+  /* Basic styling for the container*/
+  .container {
+    max-width: 1200px; /*Adjust max-width as needed*/
+    margin: 0 auto; /* center the container*/
+    padding: 20px; /*add padding around the container*/
+ 
+  }
+  /* Styling for rows*/
+
+  .row {
+    display: flex;
+    
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for columns*/
+
+  .column {
+    flex: 1; /* each column takes up equal space*/
+    padding: 10px; /*add padding inside each column*/
+    border: 1px solid #ccc;
+  }
+
+  /*Alternate background colors for rows*/
+  .row1 {
+    background-color: #f0f0f0;
+  }
+
+  .row2 {
+    background-color: #e0e0e0;
+  }
+
+  /*Media query for tablet and desktop viewports */
+  @media (max-width:620px) {
+    .column {
+      flex: 1 1 50%; /*two columns per row on tablets*/
+    }
+  }
+
+  /* Media query for mobile viewports */
+  @media (max-width: 400px) {
+    .row {
+      flex-direction: column; /*stack columns vertically on mobile */
+    }
+
+    .column {
+      flex: 1; /*full width for columns on mobil */
+      margin-bottom: 10px; /* ad margin between columns on mobile*/
+    }
+  }
+  /* Style rules for mobile viewport*/
+  
+  /* Style rules to show mobile class and hide tab-desk class*/
+  .mobile {
+    display:block;
+  }
+  .tab-desk {
+    display: none;
+  }
+  
+  /* Style rules for header area*/
+  .mobile h1 {
+    padding: 2%;
+    text-align: center;
+  }
+  
+  h1, .mobile h1 {
+  
+    font-family: "Emblema One", cursive;
+  
+  }
+  
+  main{
+    font-family: "Lora", serif;
+  
+  }
+  /* Style rules for navigation area*/
+  nav {
+    background-color: #2d4677;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    text-align: center;
+  }
+  
+  nav li {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: Geneva, Arial, sans-serif;
+    font-weight: bold;
+  }
+  
+  nav li a {
+    display: block;
+    color: #e0ae08;
+    padding: 0.5em 2em;
+    text-decoration: none;
+  }
+  
+  /* Style rules for main content*/
+  
+  main {
+    padding: 2%;
+    font-family: verdana, Arial,sans-serif;
+  }
+  main p {
+    font-size: 1.25em;
+  }
+  
+  .action {
+    font-size: 1.75em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  
+  
+  /* Style rules for footer content*/
+  footer {
+    text-align: center;
+    font-size: 0.85em;
+    background-color: #2d4677;
+    color: #f59e34;
+    padding: 1% 0%;
+  }
+  
+  footer a {
+    color: #f59e34;
+    text-decoration: none;
+  }
+  
+  
+  
+    /*Tablet Viewport: Style rules for nav area*/
+    nav li {
+      border-top: 0;
+      display: inline-block;
+      font-size: 1.25em;
+    }
+  
+    nav li a {
+      padding: 0.5em;
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  /*Desktop Viewport: Style rules for main content*/
+  #info ul {
+    margin-left: 5%;
+  }
+  
+  
+  
+  
+  
+  
