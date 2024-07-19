@@ -22,11 +22,20 @@
   /* Style rules for body and images*/
 
   body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #898c8e41;
   }
   img {
      max-width: 100%;
      display: block;
+  }
+
+  .bio-image img {
+    width: 100%;
+    max-width: 300px;
+    height:auto;
+    border-radius: 8px;
   }
 
   /* Basic styling for the container*/
@@ -61,10 +70,120 @@
     background-color: #e0e0e0;
   }
 
+  /*Section styling*/
+
+  .bio-section {
+    padding: 20px;
+    background-color: #898c8e41;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+
+  /*Container for bio image and text*/
+  .bio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;  /*not mentioned in the textbook*/
+  }
+
+  /*Text styling*/
+  .bio-text h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  .bio-text p {
+    font-size: 16px;
+    color: #111111;
+  }
+
+/*Introduction section*/
+.intro-section {
+  padding: 20px;
+  background-color: #5d7dbd;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.intro-container hi {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.intro-container p {
+  font-size: 16px;
+  color: #111111;
+}
+
+aside {
+  text-align: center;
+  font-size: 1.0em;
+  text-shadow: 4px 4px 10px #c5a687;
+}
+figure {
+  border: 4px solid #2a1f14;
+  box-shadow: 6px 6px 10px #c5a687;
+  max-width: 400px;
+  margin: 2% auto;
+}
+
+figcaption {
+  padding: 2%;
+  border-top: 4px solid #2a1f14;
+}
+/*Media query for Tablet Viewport*/
+@media screen and (min-width: 620px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+  }
+
+  aside {
+    grid-column: 1/span 2;
+  }
+}
+
+/*Media Query for Desktop Viewport*/
+@media screen and (min-width: 1000px) {
+  nav li a:hover {
+    color: #2a1f14;
+    background-color: #f6eee4;
+    opacity: 0.5;
+    }
+    
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 30px;
+  }
+  
+  aside {
+    grid-column: 1/span 3;
+    font-size: 1em;
+  }
+
+   /*Desktop Viewport: Show desktop class, hide mobile-tablet class*/
+.desktop {
+  display: block;
+}
+
+.mobile-tablet {
+  display: none;
+}
+}
   /*Media query for tablet and desktop viewports */
-  @media (max-width:620px) {
+  @media (min-width:768px) {
     .column {
       flex: 1 1 50%; /*two columns per row on tablets*/
+    }
+
+    .bio-container {
+      flex-direction: row; /*not mentioned in the textbook*/
     }
   }
 
@@ -78,17 +197,82 @@
       flex: 1; /*full width for columns on mobil */
       margin-bottom: 10px; /* ad margin between columns on mobile*/
     }
-  }
-  /* Style rules for mobile viewport*/
-  
-  /* Style rules to show mobile class and hide tab-desk class*/
-  .mobile {
+    .bio-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Style rules to show mobile class and hide tab-desk class*/
+  .mobile, .mobile-tablet {
     display:block;
   }
-  .tab-desk {
+  .tab-desk, .desktop {
     display: none;
   }
+  }
+
+  /*Media Query for large Desktop Viewports*/
+@media screen and (min-width: 1921px) {
+
+  body {
+    background: linear-gradient(#e4e7ec, #a2abb141);
+  }
+  #wrapper {
+    width: 1920px;
+    margin: 0 auto;
+  }
+  main {
+    background-color: #858c9b;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:10px ;
+  }
+
+  aside {
+    grid-column: 1/span 4;
+    font-size: 3em;
+  }
+}
+
+/*Media Query for Print*/
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+
+  }
+}
+  /* Style rules for mobile viewport*/
   
+  
+
+ 
+  
+/* Style rules for table*/
+table {
+  border: 1px solid #230359;
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+}
+
+caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1%;
+}
+
+ td {
+  border: 1px solid #230359;
+  padding: 1%;
+}
+
+tr:nth-child(odd) {
+  background-color: #5d7dbd;
+}
   /* Style rules for header area*/
   .mobile h1 {
     padding: 2%;
@@ -160,35 +344,4 @@
   footer a {
     color: #f59e34;
     text-decoration: none;
-  }
-  
-  
-  
-    /*Tablet Viewport: Style rules for nav area*/
-    nav li {
-      border-top: 0;
-      display: inline-block;
-      font-size: 1.25em;
-    }
-  
-    nav li a {
-      padding: 0.5em;
-    }
-  
-  
-  
-  
-  
-  
-  
-  
-  /*Desktop Viewport: Style rules for main content*/
-  #info ul {
-    margin-left: 5%;
-  }
-  
-  
-  
-  
-  
-  
+  }  
