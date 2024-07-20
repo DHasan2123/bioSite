@@ -209,6 +209,10 @@ figcaption {
   .tab-desk, .desktop {
     display: none;
   }
+
+  #trips-date {
+    display: none;
+  }
   }
 
   /*Media Query for large Desktop Viewports*/
